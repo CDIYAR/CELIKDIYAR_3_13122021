@@ -1,5 +1,21 @@
-.deuxieme-parti-header {
-  background-color: #f1f1f1;
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+#mon-header-index {
+  display: flex;
+  flex-direction: column;
+}
+
+.mon-logo-principale {
+  text-align: center;
+  font-size: 30px;
+}
+
+#Titre-footer {
+  font-family: "Shrikhand", cursive;
+  color: white;
+}
+
+.mon-footer {
+  background-color: #353535;
 }
 
 /*# sourceMappingURL=style.css.map */
