@@ -1,21 +1,154 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap");
+body {
+  margin: 0px;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding: 15px;
+}
+
 #mon-header-index {
   display: flex;
   flex-direction: column;
 }
 
+ol {
+  list-style-type: none;
+}
+
+.numero-li {
+  margin-left: -20px;
+  background: #9356dc;
+  height: 25px;
+  width: 25px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-right: 15px;
+}
+
 .mon-logo-principale {
+  margin: 0px;
   text-align: center;
-  font-size: 30px;
+  font-family: "Shrikhand", cursive;
+  padding: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.Localisation {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  background-color: #f3f3f3;
+}
+.Localisation i {
+  padding: 19px;
+  font-size: 20px;
+  margin-left: -15px;
+}
+.Localisation p {
+  font-size: 20px;
+}
+
+.deuxieme-parti-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+}
+.deuxieme-parti-header .header-titre-h2 {
+  text-align: center;
+  margin: 30px 0px 10px 0px;
+}
+
+.button-header {
+  border: 0;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  margin-bottom: 20px;
+  box-shadow: 0.25rem 0.25rem 10px #c7c0c0;
+}
+.button-header :hover {
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 10px 10px 10px #dadada;
+}
+
+.titre-fonctionnement {
+  margin-bottom: 10px;
+}
+
+#ol-main-index {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px;
+  margin: 0px;
+  margin-left: -19px;
+}
+#ol-main-index li {
+  width: 32%;
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  margin-left: 30px;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
+  padding: 9px;
+  margin: 16px 0 16px 30px;
+}
+#ol-main-index i {
+  margin-right: 24px;
+  color: #7e7e7e;
+}
+
+.mon-footer {
+  background-color: #353535;
+  padding: 10px;
 }
 
 #Titre-footer {
   font-family: "Shrikhand", cursive;
   color: white;
+  margin: 0px;
+  font-size: 19px;
+  padding: 6px;
 }
 
-.mon-footer {
-  background-color: #353535;
+#ul-footer {
+  margin: 0px;
+  list-style-type: none;
+  flex-direction: column;
+  padding-left: 0px;
+}
+#ul-footer li {
+  padding: 5px;
+}
+
+.footer-a {
+  display: flex;
+  list-style-type: none;
+  color: white;
+  text-decoration: none;
+}
+.footer-a i {
+  margin-right: 15px;
+}
+
+.P-footer {
+  margin: 0px;
+}
+
+.restaurantContainer {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
