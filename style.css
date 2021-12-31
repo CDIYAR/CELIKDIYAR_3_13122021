@@ -6,25 +6,6 @@ body {
 }
 
 /********Header******/
-.mon-header-page {
-  display: flex;
-  margin: 0px;
-  text-align: center;
-  padding: 16px;
-  box-shadow: 0 0 10px #b5b0b0;
-  position: relative;
-}
-
-.titre-pages {
-  font-family: Shrikhand, "cursive";
-  margin-left: 20px;
-}
-
-.main-pages {
-  border-radius: 40px 40px 0px 0px;
-  background-color: #f6f6f6;
-}
-
 #mon-header-index {
   display: flex;
   flex-direction: column;
@@ -228,6 +209,86 @@ body {
 .footer-a .P-footer {
   margin: 0px;
   color: white;
+}
+
+/*******MesPages**********/
+/*****header****/
+.mon-header-page {
+  display: flex;
+  margin: 0px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 0 10px #b5b0b0;
+  position: relative;
+}
+.mon-header-page a {
+  height: 0px;
+  width: 0px;
+}
+.mon-header-page a i {
+  margin: 15px;
+  font-size: 19px;
+  color: black;
+}
+
+.mon-logo-principale-page {
+  text-align: center;
+  font-family: "Shrikhand", cursive;
+  margin: auto;
+}
+
+.main-pages {
+  background-color: #f6f6f6;
+  position: relative;
+  border-radius: 35px 35px 0px 0px;
+  margin-top: -60px;
+}
+.main-pages .Nom-des-menus {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px 0px;
+  height: 80px;
+}
+.main-pages .titre-pages {
+  font-family: Shrikhand, "cursive";
+  font-family: Shrikhand, "cursive";
+  height: 0px;
+  margin: 30px 0px;
+}
+.main-pages .div-heart {
+  font-size: 30px;
+  margin: 26px;
+}
+
+.grande-img {
+  max-width: 100%;
+  max-height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.button-page {
+  border: 0;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  box-shadow: 0.25rem 0.25rem 10px #c7c0c0;
+  justify-content: center;
+}
+.button-page:hover {
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 10px 10px 10px #dfdfdf;
+}
+
+.button-a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  padding: 40px 0px;
 }
 
 @media only screen and (max-width: 767px) {
