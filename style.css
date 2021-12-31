@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap");
 body {
   margin: 0px;
@@ -246,7 +247,7 @@ body {
 .main-pages .Nom-des-menus {
   display: flex;
   justify-content: space-between;
-  padding: 5px 10px 0px;
+  padding: 5px 20px 0px;
   height: 80px;
 }
 .main-pages .titre-pages {
@@ -289,6 +290,36 @@ body {
   justify-content: center;
   text-decoration: none;
   padding: 40px 0px;
+}
+
+.ensemble-section {
+  display: flex;
+  justify-content: space-around;
+}
+.ensemble-section .Menus {
+  width: 30%;
+  padding: 10px;
+}
+.ensemble-section .Menus .titre-menu {
+  border-bottom: 4px solid #b4e7b4;
+  width: 12%;
+  padding: 3px 0px;
+  margin-top: 0px;
+}
+.ensemble-section .Menus .Entrée {
+  border-radius: 10px;
+  background: white;
+  box-shadow: 5px 5px 12px #dfdfdf;
+  margin: 15px 0px;
+}
+.ensemble-section .Menus .footer-div-section {
+  padding: 10px;
+}
+.ensemble-section .Menus .footer-div-section h4 {
+  margin: 0px;
+}
+.ensemble-section .Menus .footer-div-section p {
+  margin: 0px;
 }
 
 @media only screen and (max-width: 767px) {
