@@ -1,5 +1,102 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap");
+.container-chargement {
+  height: 100%;
+  width: 100%;
+  background-color: #fff5f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  z-index: 10;
+  animation: mon-loader 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+.p-chargement {
+  font-family: "Shrikhand", cursive;
+  color: black;
+  font-size: 20px;
+}
+
+.mon-chargement {
+  border: 4px solid #FF79DA;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  animation: anim-chargement 1s infinite ease-in-out;
+}
+
+.mon-chargement::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #9356DC;
+  border-radius: 30px;
+  position: absolute;
+}
+
+@keyframes anim-chargement {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.delay-loader {
+  animation-delay: 1s;
+}
+
+@keyframes mon-loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+/********Footer******/
+.mon-footer {
+  background-color: #353535;
+  padding: 10px;
+}
+.mon-footer #Titre-footer {
+  font-family: "Shrikhand", cursive;
+  color: white;
+  margin: 0px;
+  font-size: 19px;
+  padding: 6px;
+}
+.mon-footer #ul-footer {
+  margin: 0px;
+  list-style-type: none;
+  flex-direction: column;
+  padding-left: 0px;
+}
+.mon-footer #ul-footer li {
+  padding: 5px;
+}
+
+.footer-a {
+  display: flex;
+  list-style-type: none;
+  color: white;
+  text-decoration: none;
+}
+.footer-a i {
+  margin-right: 15px;
+}
+.footer-a .P-footer {
+  margin: 0px;
+  color: white;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   margin: 0px;
   width: 100%;
@@ -54,7 +151,7 @@ body {
   background-color: #686868;
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   margin-bottom: 20px;
-  box-shadow: 0.25rem 0.25rem 10px #c7c0c0;
+  box-shadow: 4px 4px 10px #c7c0c0;
 }
 .deuxieme-parti-header .button-header:hover {
   cursor: pointer;
@@ -132,7 +229,7 @@ body {
   border-radius: 20px;
   text-decoration: none;
   max-height: 275px;
-  box-shadow: 1px 2px 10px #c7c0c0;
+  box-shadow: 4px 4px 10px #c7c0c0;
   position: relative;
 }
 .card a {
@@ -161,9 +258,25 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.div-a-section .div-heart {
+
+.div-heart {
   font-size: 30px;
   margin: 10px;
+  position: relative;
+  border: 0 solid transparent;
+  color: black;
+  cursor: pointer;
+}
+.div-heart .heart-1 {
+  position: absolute;
+}
+.div-heart .heart-2 {
+  background: 1s;
+}
+.div-heart:hover {
+  content: "";
+  opacity: 2;
+  background: linear-gradient(0deg, #9356dc, #ff79da);
 }
 
 .h3-figure {
@@ -176,44 +289,322 @@ body {
   margin: 0px;
 }
 
-/********Footer******/
-.mon-footer {
-  background-color: #353535;
-  padding: 10px;
-}
-.mon-footer #Titre-footer {
-  font-family: "Shrikhand", cursive;
-  color: white;
-  margin: 0px;
-  font-size: 19px;
-  padding: 6px;
-}
-.mon-footer #ul-footer {
-  margin: 0px;
-  list-style-type: none;
-  flex-direction: column;
-  padding-left: 0px;
-}
-.mon-footer #ul-footer li {
-  padding: 5px;
-}
+@media only screen and (max-width: 767px) {
+  /********Header******/
+  #mon-header-index {
+    display: flex;
+    flex-direction: column;
+  }
+  #mon-header-index .Localisation {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    background-color: #f3f3f3;
+  }
+  #mon-header-index .Localisation i {
+    padding: 19px;
+    font-size: 20px;
+    margin-left: -15px;
+  }
+  #mon-header-index .Localisation p {
+    font-size: 20px;
+  }
 
-.footer-a {
-  display: flex;
-  list-style-type: none;
-  color: white;
-  text-decoration: none;
-}
-.footer-a i {
-  margin-right: 15px;
-}
-.footer-a .P-footer {
-  margin: 0px;
-  color: white;
-}
+  .mon-logo-principale {
+    margin: 0px;
+    text-align: center;
+    font-family: "Shrikhand", cursive;
+    padding: 16px;
+    box-shadow: 0 0 10px #b5b0b0;
+    position: relative;
+  }
 
+  .deuxieme-parti-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fafafa;
+  }
+  .deuxieme-parti-header .header-titre-h2 {
+    text-align: center;
+    margin: 30px 0px 10px 0px;
+  }
+  .deuxieme-parti-header .button-header {
+    border: 0;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #686868;
+    background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 10px #c7c0c0;
+  }
+  .deuxieme-parti-header .button-header:hover {
+    cursor: pointer;
+    transition-duration: 0.25s;
+    box-shadow: 10px 10px 10px #dfdfdf;
+  }
+
+  /********Section-Fonctionnement******/
+  .Fonctionnement {
+    padding: 15px;
+  }
+  .Fonctionnement .titre-fonctionnement {
+    margin-bottom: 10px;
+  }
+
+  #ol-main-index {
+    justify-content: space-around;
+    padding: 0px;
+    flex-direction: column;
+    margin-left: 0px;
+    margin: 0px;
+  }
+  #ol-main-index li {
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px #dfdfdf;
+    padding: 9px;
+    margin: 16px auto 16px auto;
+    width: 90%;
+  }
+  #ol-main-index i {
+    margin-right: 24px;
+    color: #7e7e7e;
+  }
+
+  .numero-li {
+    margin-left: -20px;
+    background: #9356DC;
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-right: 15px;
+  }
+
+  /********Section-Restaurant******/
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f6f6f6;
+  }
+  .restaurants .card-div1 {
+    flex-direction: column;
+    width: 100%;
+  }
+  .restaurants .card-div2 {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card {
+    width: 92%;
+    margin: 10px auto 10px auto;
+    background-color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    max-height: 275px;
+    box-shadow: 1px 2px 10px #c7c0c0;
+    position: relative;
+  }
+
+  .img-index {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .p-info-figure {
+    background-color: #99E2D0;
+    color: #1a7c65;
+    padding: 9px 20px;
+    border-radius: 2px;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+  }
+
+  .div-a-section {
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .div-a-section .div-heart {
+    font-size: 30px;
+    margin: 10px;
+    background-color: violet;
+  }
+
+  .h3-figure {
+    color: black;
+    margin: 0px;
+  }
+
+  .p-figure {
+    color: black;
+    margin: 0px;
+  }
+
+  /********Footer******/
+  .mon-footer {
+    background-color: #353535;
+    padding: 10px;
+  }
+  .mon-footer #Titre-footer {
+    font-family: "Shrikhand", cursive;
+    color: white;
+    margin: 0px;
+    font-size: 19px;
+    padding: 6px;
+  }
+  .mon-footer #ul-footer {
+    margin: 0px;
+    list-style-type: none;
+    flex-direction: column;
+    padding-left: 0px;
+  }
+  .mon-footer #ul-footer li {
+    padding: 5px;
+  }
+
+  .footer-a {
+    display: flex;
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-a i {
+    margin-right: 15px;
+  }
+  .footer-a .P-footer {
+    margin: 0px;
+    color: white;
+  }
+}
+@media only screen and (max-width: 767px) {
+  /*******MesPages**********/
+  .mon-header-page {
+    display: flex;
+    margin: 0px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 0 10px #b5b0b0;
+    position: relative;
+  }
+  .mon-header-page a {
+    height: 0px;
+    width: 0px;
+  }
+  .mon-header-page a i {
+    margin: 15px;
+    font-size: 19px;
+    color: black;
+  }
+
+  .mon-logo-principale-page {
+    text-align: center;
+    font-family: "Shrikhand", cursive;
+    margin: auto;
+  }
+
+  .main-pages {
+    background-color: #f6f6f6;
+    position: relative;
+    border-radius: 35px 35px 0px 0px;
+    margin-top: -60px;
+  }
+  .main-pages .Nom-des-menus {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px 0px;
+    height: 80px;
+  }
+  .main-pages .titre-pages {
+    font-family: Shrikhand, "cursive";
+    font-family: Shrikhand, "cursive";
+    height: 0px;
+    margin: 30px 0px;
+  }
+  .main-pages .div-heart {
+    font-size: 30px;
+    margin: 26px;
+  }
+
+  .grande-img {
+    max-width: 100%;
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .button-page {
+    border: 0;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: #686868;
+    background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+    box-shadow: 0.25rem 0.25rem 10px #c7c0c0;
+    justify-content: center;
+  }
+  .button-page:hover {
+    cursor: pointer;
+    transition-duration: 0.25s;
+    box-shadow: 10px 10px 10px #dfdfdf;
+  }
+
+  .button-a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 40px 0px;
+  }
+
+  .ensemble-section {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .ensemble-section .Menus {
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+  }
+  .ensemble-section .Menus .titre-menu {
+    border-bottom: 4px solid #b4e7b4;
+    width: 12%;
+    padding: 3px 0px;
+    margin-top: 0px;
+  }
+  .ensemble-section .Menus .Entrée {
+    border-radius: 10px;
+    background: white;
+    box-shadow: 5px 5px 12px #dfdfdf;
+    margin: 15px 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .ensemble-section .Menus .footer-div-section {
+    padding: 15px;
+  }
+  .ensemble-section .Menus .footer-div-section h4 {
+    margin: 0px;
+  }
+  .ensemble-section .Menus .footer-div-section p {
+    margin: 0px;
+  }
+}
 /*******MesPages**********/
-/*****header****/
 .mon-header-page {
   display: flex;
   margin: 0px;
@@ -299,6 +690,7 @@ body {
 .ensemble-section .Menus {
   width: 30%;
   padding: 10px;
+  overflow: hidden;
 }
 .ensemble-section .Menus .titre-menu {
   border-bottom: 4px solid #b4e7b4;
@@ -306,72 +698,71 @@ body {
   padding: 3px 0px;
   margin-top: 0px;
 }
-.ensemble-section .Menus .Entrée {
+
+.Entrée {
   border-radius: 10px;
   background: white;
   box-shadow: 5px 5px 12px #dfdfdf;
   margin: 15px 0px;
+  display: flex;
+  padding: 15px;
+  cursor: pointer;
+  animation: itemAppear 0.6s;
 }
-.ensemble-section .Menus .footer-div-section {
-  padding: 10px;
+.Entrée:hover + .check {
+  transform: translate(-60px, 0);
 }
-.ensemble-section .Menus .footer-div-section h4 {
+.Entrée .footer-div-section {
+  width: calc(100% - 29px);
+}
+.Entrée .footer-div-section h4 {
   margin: 0px;
 }
-.ensemble-section .Menus .footer-div-section p {
+.Entrée .footer-div-section p {
   margin: 0px;
 }
+.Entrée .prix {
+  margin: auto;
+}
 
-@media only screen and (max-width: 767px) {
-  /********Section-Fonctionnement******/
-  #ol-main-index {
-    justify-content: space-around;
-    padding: 0px;
-    flex-direction: column;
-    margin-left: 0px;
-    margin: 0px;
-  }
-  #ol-main-index li {
-    display: flex;
-    align-items: center;
-    background-color: #f6f6f6;
-    border-radius: 20px;
-    box-shadow: 4px 4px 8px #dfdfdf;
-    padding: 9px;
-    margin: 16px auto 16px auto;
-    width: 90%;
-  }
-  #ol-main-index i {
-    margin-right: 24px;
-    color: #7e7e7e;
-  }
+.delay-0 {
+  animation-delay: 0s;
+}
 
-  /********Section-Restaurant******/
-  .restaurants {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: #f6f6f6;
+@keyframes itemAppear {
+  0% {
+    transform: scale(0);
   }
-  .restaurants .card-div1 {
-    flex-direction: column;
-    width: 100%;
+  100% {
+    transform: scale(1);
   }
-  .restaurants .card-div2 {
-    flex-direction: column;
-    width: 100%;
-  }
+}
+.check {
+  background-color: #99e2d0;
+  width: 64px;
+  margin: -15px -80px -15px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.7s ease-in-out;
+}
 
-  .card {
-    width: 92%;
-    margin: 10px auto 10px auto;
-    background-color: white;
-    border-radius: 20px;
-    text-decoration: none;
-    max-height: 275px;
-    box-shadow: 1px 2px 10px #c7c0c0;
-    position: relative;
-  }
+.div-check {
+  height: 24px;
+  width: 24px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transition-duration: 0.7s;
+}
+.div-check .fa-check {
+  color: #99e2d0;
+}
+
+.Entrée:hover + .div-check {
+  transform: rotate(360deg);
 }
 
 /*# sourceMappingURL=style.css.map */

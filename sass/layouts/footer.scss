@@ -1,0 +1,51 @@
+/********Footer******/
+
+.mon-footer{
+    background-color:#353535;
+    padding: 10px;
+
+    #Titre-footer{
+
+        font-family: 'Shrikhand', cursive;
+        color: white;
+        margin: 0px;
+        font-size: 19px;
+        padding: 6px;
+    }
+
+
+
+    #ul-footer{
+
+        margin: 0px;
+        list-style-type: none;
+        flex-direction: column;
+        padding-left: 0px;
+    
+        li{
+            padding: 5px;
+        }
+    
+    }
+    
+
+}
+
+
+.footer-a{   
+    display: flex;
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
+   
+    i{
+        margin-right: 15px;
+    }
+
+    .P-footer{
+
+      margin: 0px;
+      color: white;
+
+            }
+}
