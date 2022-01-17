@@ -1,5 +1,9 @@
 /*******MesPages**********/
+body{
 
+    font-family: Roboto,sans-serif;
+    margin: 0px;
+}
 
 .mon-header-page{
     display: flex;
@@ -125,50 +129,86 @@
 }
 
 
-.Entrée{
 
+
+
+
+.Entrée{
+    display: flex;
     border-radius: 10px;
     background: white;
     box-shadow: 5px 5px 12px #dfdfdf;
     margin: 15px 0px;
-    display: flex;
-    padding: 15px;
+    padding: 17px;
     cursor: pointer;
-    animation: itemAppear .6s;
-  
+    animation: anim-menu 0.5s;
+    overflow: hidden;
 
-    &:hover + .check{
-        transform: translate(-60px, 0);
+  
+    &:hover .check{
+        margin-right: -17px;
     }
 
+    &:hover .div-check {
+        transform: rotate(0deg);
+       
+    }
      
+
     .footer-div-section{
             
         width: calc(100% - 29px);
+        text-overflow: ellipsis;
+        overflow: hidden;
+
 
         h4{
-            margin: 0px;
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-weight: 700;
         }
 
         p{
-            margin: 0px;
+            
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-weight: 200;
         }
     
     }
     
     .prix{
-        margin: auto;
+        
+
+        font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 0.5rem;
     }
     
 }
 
-
-.delay-0 {
+.delay1 {
     animation-delay: 0s;
+   
+}
+
+@for $delay from 1 to 11 {
+
+    .delay-#{$delay} {
+        animation-delay: ($delay * 0.1s);
+       
+    }
+
 }
 
 
-@keyframes itemAppear {
+@keyframes anim-menu {
     0% {
         transform: scale(0);
     }
@@ -180,20 +220,17 @@
 
 
 
-
 .check{
     
     background-color: #99e2d0;
-    width: 64px;
-    margin: -15px -80px -15px 16px;
+    width: 95px;
+    margin: -17px -110px -17px 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform  0.7s ease-in-out;
+    transition-duration: 0.6s;
     
 }
-
-
 
 
 .div-check{
@@ -204,7 +241,9 @@
     align-items: center;
     justify-content: center;
     border-radius: 100px;
-    transition-duration: 0.7s;
+    transform: rotate(180deg);
+    transition-duration: 0.6s;
+
 
     .fa-check{
         color: #99e2d0;
@@ -212,6 +251,3 @@
 }
 
 
-.Entrée:hover+.div-check {
-    transform: rotate(360deg);
-}

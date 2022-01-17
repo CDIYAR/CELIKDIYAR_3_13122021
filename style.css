@@ -3,15 +3,15 @@
 .container-chargement {
   height: 100%;
   width: 100%;
-  background-color: #fff5f6;
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: fixed;
   z-index: 10;
-  animation: mon-loader 0.5s;
-  animation-delay: 0.5s;
+  animation: mon-loader 1s;
+  animation-delay: 1s;
   animation-fill-mode: both;
 }
 
@@ -46,10 +46,6 @@
     transform: rotate(360deg);
   }
 }
-.delay-loader {
-  animation-delay: 1s;
-}
-
 @keyframes mon-loader {
   100% {
     opacity: 0;
@@ -95,11 +91,6 @@
 body {
   margin: 0px;
   padding: 0px;
-}
-
-body {
-  margin: 0px;
-  width: 100%;
   font-family: "Roboto", sans-serif;
 }
 
@@ -260,23 +251,23 @@ body {
 }
 
 .div-heart {
-  font-size: 30px;
-  margin: 10px;
   position: relative;
-  border: 0 solid transparent;
-  color: black;
-  cursor: pointer;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.div-heart:hover {
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .div-heart .heart-1 {
   position: absolute;
+  background-color: transparent;
+  color: black;
 }
 .div-heart .heart-2 {
-  background: 1s;
-}
-.div-heart:hover {
-  content: "";
-  opacity: 2;
-  background: linear-gradient(0deg, #9356dc, #ff79da);
+  color: white;
 }
 
 .h3-figure {
@@ -605,6 +596,11 @@ body {
   }
 }
 /*******MesPages**********/
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0px;
+}
+
 .mon-header-page {
   display: flex;
   margin: 0px;
@@ -700,36 +696,94 @@ body {
 }
 
 .Entrée {
+  display: flex;
   border-radius: 10px;
   background: white;
   box-shadow: 5px 5px 12px #dfdfdf;
   margin: 15px 0px;
-  display: flex;
-  padding: 15px;
+  padding: 17px;
   cursor: pointer;
-  animation: itemAppear 0.6s;
+  animation: anim-menu 0.5s;
+  overflow: hidden;
 }
-.Entrée:hover + .check {
-  transform: translate(-60px, 0);
+.Entrée:hover .check {
+  margin-right: -17px;
+}
+.Entrée:hover .div-check {
+  transform: rotate(0deg);
 }
 .Entrée .footer-div-section {
   width: calc(100% - 29px);
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .Entrée .footer-div-section h4 {
-  margin: 0px;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 700;
 }
 .Entrée .footer-div-section p {
-  margin: 0px;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 200;
 }
 .Entrée .prix {
-  margin: auto;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-left: 0.5rem;
 }
 
-.delay-0 {
+.delay1 {
   animation-delay: 0s;
 }
 
-@keyframes itemAppear {
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}
+
+.delay-7 {
+  animation-delay: 0.7s;
+}
+
+.delay-8 {
+  animation-delay: 0.8s;
+}
+
+.delay-9 {
+  animation-delay: 0.9s;
+}
+
+.delay-10 {
+  animation-delay: 1s;
+}
+
+@keyframes anim-menu {
   0% {
     transform: scale(0);
   }
@@ -739,12 +793,12 @@ body {
 }
 .check {
   background-color: #99e2d0;
-  width: 64px;
-  margin: -15px -80px -15px 16px;
+  width: 95px;
+  margin: -17px -110px -17px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.7s ease-in-out;
+  transition-duration: 0.6s;
 }
 
 .div-check {
@@ -755,14 +809,11 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  transition-duration: 0.7s;
+  transform: rotate(180deg);
+  transition-duration: 0.6s;
 }
 .div-check .fa-check {
   color: #99e2d0;
-}
-
-.Entrée:hover + .div-check {
-  transform: rotate(360deg);
 }
 
 /*# sourceMappingURL=style.css.map */
