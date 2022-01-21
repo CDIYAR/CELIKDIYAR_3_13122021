@@ -14,13 +14,20 @@
            margin: 0px;
            background-color:#f3f3f3;
         
-           i {
-               padding: 19px;
-               font-size: 20px;
-               margin-left: -15px;}
-        
-    
-             p {font-size: 20px;}
+           .map-icone{
+            padding: 19px;
+            font-size: 20px;
+            margin-left: 0px;
+ 
+         }
+     
+ 
+            input { font-size:20px;
+                 border: transparent;
+                 background: transparent;
+                  width: 46%;
+                  max-width: 180px;;
+            }
             
         }  
     }
@@ -56,18 +63,18 @@
             font-size: 18px;
             border-radius: 50px;
             color: #fff;
-            background-color: #686868;
-            background-image: linear-gradient(0deg,$Primaire, $Secondaire);
-        margin-bottom: 20px;
-        box-shadow: $shadowbox;
+            background: linear-gradient(0deg,$Primaire, $Secondaire);
+             margin-bottom: 20px;
+            box-shadow: $shadowbox;
             
             
-                &:hover{
-                cursor: pointer;
-                transition-duration: .25s;
-                box-shadow: 10px 10px 10px #dfdfdf;}
-        
+            &:hover{
+            cursor: pointer;
+            box-shadow: 5px 5px 10px rgba(39, 38, 38, 0.6);
             }
+            
+        
+        }
     
     }
     
@@ -81,7 +88,7 @@
     
     .Fonctionnement{
     
-        padding: 15px;
+        padding: 20px;
     
     
         .titre-fonctionnement{
@@ -112,7 +119,7 @@
             box-shadow: 4px 4px 8px #dfdfdf;
             padding: 9px;
             margin: 16px auto 16px auto;
-            width: 90%;
+            width: 95%;
         }
     
         i{
@@ -147,6 +154,10 @@
         flex-direction: column;
         width: 100%;
         background-color: #f6f6f6;
+
+        .titre-restaurants{
+            margin: 50px 10px 5px;
+        }
     
     
             .card-div1{
@@ -158,7 +169,8 @@
             .card-div2{
     
                 flex-direction: column;
-                  width: 100%;
+                width: 100%;
+                margin-bottom: 50px;
             }
     }
     
@@ -200,14 +212,46 @@
         display: flex;
         justify-content: space-between;
     
-        .div-heart{
+    }
+
+
+    .div-heart{
+            position: relative;
             font-size: 30px;
-            margin: 10px;
-            background-color: violet;
-    
-          }
+            justify-content: center;
+            align-items: center;
             
-        }
+         
+             &:hover .heart-1{
+               display: none;
+             
+             }
+         
+             &:hover .heart-2 { 
+                  
+             background-image : linear-gradient($Primaire, $Secondaire);
+             -webkit-background-clip : text;
+             background-clip : text;
+             -webkit-text-fill-color : transparent;
+             opacity: 1;
+           
+             }
+           
+         
+             .heart-1{
+             position: absolute;
+             background-color: transparent;
+             color: black;
+             }
+         
+         
+             .heart-2{
+             opacity: 0;
+             transition: opacity 1s;
+             }
+         
+         
+    }
         
         
     
@@ -230,7 +274,7 @@
     
     .mon-footer{
         background-color:#353535;
-        padding: 10px;
+        padding: 10px 20px;
     
         #Titre-footer{
     

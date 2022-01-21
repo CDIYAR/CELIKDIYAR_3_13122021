@@ -16,13 +16,18 @@ body{
        margin: 0px;
        background-color:#f3f3f3;
     
-       i {
+       .map-icone{
            padding: 19px;
            font-size: 20px;
-           margin-left: -15px;}
+           margin-left: 100px;
+
+        }
     
 
-         p {font-size: 20px;}
+        input { font-size:20px;
+                border: transparent;
+                background: transparent;
+        }
         
     }  
 }
@@ -50,6 +55,11 @@ body{
         text-align: center;
         margin: 30px 0px 10px 0px;
     }
+    
+    p{
+        text-align: center;
+        width: 80%;
+    }
 
     .button-header{
     
@@ -58,18 +68,19 @@ body{
         font-size: 18px;
         border-radius: 50px;
         color: #fff;
-        background-color: #686868;
-        background-image: linear-gradient(0deg,$Primaire, $Secondaire);
-    margin-bottom: 20px;
-    box-shadow: $shadowbox;
-        
-        
-            &:hover{
-            cursor: pointer;
-            transition-duration: .25s;
-            box-shadow: 10px 10px 10px #dfdfdf;}
-    
+        background: linear-gradient(0deg,$Primaire, $Secondaire);
+        margin-bottom: 20px;
+        box-shadow: $shadowbox;
+        cursor: pointer;
+
+
+         &:hover{
+        cursor: pointer;
+        box-shadow: 5px 5px 10px rgba(39, 38, 38, 0.6);
         }
+        
+    
+    }
 
 }
 
@@ -114,6 +125,9 @@ body{
         box-shadow: 4px 4px 8px #dfdfdf;
         padding: 9px;
         margin: 16px 0 16px 30px;
+        font-weight: bold;
+        cursor: pointer;
+        
 
         i{
         margin-right: 24px;
@@ -151,7 +165,8 @@ body{
     background-color: $fondclr;
 
     .titre-restaurants{
-        margin-left:10px ;
+        margin-left:10px;
+        margin-top: 50px;
         }
     
 
@@ -219,28 +234,40 @@ body{
    font-size: 30px;
    justify-content: center;
    align-items: center;
+   
 
-   &:hover{
-       
-    background : -webkit-linear-gradient($Primaire, $Secondaire);
+    &:hover .heart-1{
+      display: none;
+    
+    }
+
+    &:hover .heart-2 { 
+         
+    background-image : linear-gradient($Primaire, $Secondaire);
     -webkit-background-clip : text;
+    background-clip : text;
     -webkit-text-fill-color : transparent;
-   }
+    opacity: 1;
+  
+    }
+  
 
-
- .heart-1{
-     position: absolute;
+    .heart-1{
+    position: absolute;
     background-color: transparent;
     color: black;
- }
+    }
 
 
- .heart-2{
-    color: white;
- }
+    .heart-2{
+    opacity: 0;
+    transition: opacity 1s;
+    color: transparent;
+    }
 
 
 }
+
 
 
 .h3-figure{

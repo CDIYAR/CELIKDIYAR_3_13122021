@@ -85,14 +85,15 @@ body{
         color: #fff;
         background-color: #686868;
         background-image: linear-gradient(0deg,$Primaire, $Secondaire);
-    box-shadow: 0.25rem 0.25rem 10px #c7c0c0;
+    box-shadow: 4px 4px 10px #c7c0c0;
     justify-content: center;
         
         
             &:hover{
             cursor: pointer;
-            transition-duration: .25s;
-            box-shadow: 10px 10px 10px #dfdfdf;}
+            box-shadow: 5px 5px 10px rgba(39, 38, 38, 0.6);
+            }
+            
     
         
 }
@@ -121,6 +122,7 @@ body{
             width: 12%;
             padding: 3px 0px;
             margin-top: 0px;
+            font-weight: 100;
         }
 
 
@@ -139,14 +141,16 @@ body{
     background: white;
     box-shadow: 5px 5px 12px #dfdfdf;
     margin: 15px 0px;
-    padding: 17px;
+    padding: 0px;
     cursor: pointer;
     animation: anim-menu 0.5s;
     overflow: hidden;
 
+
   
-    &:hover .check{
-        margin-right: -17px;
+    &:hover .footer-div-section{
+        width: calc(85% - 75px);
+        
     }
 
     &:hover .div-check {
@@ -156,10 +160,13 @@ body{
      
 
     .footer-div-section{
-            
-        width: calc(100% - 29px);
+        width: 85%;
         text-overflow: ellipsis;
         overflow: hidden;
+        padding: 17px 0 17px 17px;
+        flex: none;
+        box-sizing: border-box;
+        transition: 0.6s;
 
 
         h4{
@@ -182,16 +189,50 @@ body{
     }
     
     .prix{
-        
-
-        font-weight: bold;
+    font-weight: bold;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-left: 0.5rem;
+    width: 15%;
+    flex: none;
+    box-sizing: border-box;
+    padding: 17px 17px 17px 10px;
     }
     
 }
+
+
+.check{
+    
+    background-color: #99e2d0;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 1s;
+    
+}
+
+
+.div-check{
+    height: 24px;
+    width:24px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    transition-duration: 0.6s;
+
+
+    .fa-check{
+        color: #99e2d0;
+    }
+}
+
+
+
 
 .delay1 {
     animation-delay: 0s;
@@ -213,41 +254,11 @@ body{
         transform: scale(0);
     }
 
+   
     100% {
         transform: scale(1);
     }
 }
 
-
-
-.check{
-    
-    background-color: #99e2d0;
-    width: 95px;
-    margin: -17px -110px -17px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition-duration: 0.6s;
-    
-}
-
-
-.div-check{
-    height: 24px;
-    width:24px;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
-    transform: rotate(180deg);
-    transition-duration: 0.6s;
-
-
-    .fa-check{
-        color: #99e2d0;
-    }
-}
 
 
