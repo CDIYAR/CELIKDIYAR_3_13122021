@@ -127,6 +127,10 @@ body{
         margin: 16px 0 16px 30px;
         font-weight: bold;
         cursor: pointer;
+
+        &:hover{
+            background-color: #f7ecf3 ;
+        }
         
 
         i{
@@ -238,6 +242,7 @@ body{
 
     &:hover .heart-1{
       display: none;
+      opacity: 1;
     
     }
 

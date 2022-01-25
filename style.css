@@ -11,8 +11,8 @@
   position: fixed;
   z-index: 10;
   animation: mon-loader 1s;
-  animation-delay: 1s;
   animation-fill-mode: both;
+  animation-delay: 1s;
 }
 
 .p-chargement {
@@ -148,6 +148,9 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+#ol-main-index li:hover {
+  background-color: #f7ecf3;
+}
 #ol-main-index li i {
   margin-right: 24px;
   color: #7e7e7e;
@@ -230,6 +233,7 @@ body {
 }
 .div-heart:hover .heart-1 {
   display: none;
+  opacity: 1;
 }
 .div-heart:hover .heart-2 {
   background-image: linear-gradient(#9356DC, #FF79DA);
@@ -371,7 +375,7 @@ body {
   box-shadow: 5px 5px 10px rgba(39, 38, 38, 0.6);
 }
 
-.button-a {
+.button-div {
   display: flex;
   justify-content: center;
   text-decoration: none;
@@ -447,7 +451,7 @@ body {
 }
 
 .check {
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   width: 75px;
   display: flex;
   align-items: center;
@@ -605,6 +609,9 @@ body {
     padding: 9px;
     margin: 16px auto 16px auto;
     width: 95%;
+  }
+  #ol-main-index li:hover {
+    background-color: #f7ecf3;
   }
   #ol-main-index i {
     margin-right: 24px;
@@ -821,7 +828,7 @@ body {
     box-shadow: 5px 5px 10px rgba(39, 38, 38, 0.6);
   }
 
-  .button-a {
+  .button-div {
     display: flex;
     justify-content: center;
     text-decoration: none;
